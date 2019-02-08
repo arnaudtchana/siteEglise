@@ -1,0 +1,69 @@
+
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+.nav > li > a {
+  color:#000000;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #387ef5;
+  color:white;
+  font-family: Roboto;
+}
+
+.couleur_bar_menu {
+  background-color: white;
+  width: 100%;
+}
+
+.taille_img{
+  height: 50px;
+}
+.navbar {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 768px){
+.navbar-nav {
+  float: right;
+  margin: 0;
+}
+}
+
+.delete_padding {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+#example {
+  background-color: white;
+}
+.couleur_fond{
+  background-color: red;
+}
+.div_predicator{
+  width:400px;
+  height: auto;
+  padding:25px;
+}
+.predicator_img{
+  width: 100%;
+  height: 400px;
+}
+.marge_haut_container{
+  margin-top:50px;
+  margin-bottom:25px;
+}
+.style_titre_predication{
+  font-size: 40px;
+  color: #000000;
+  font-weight:bold;
+}
