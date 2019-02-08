@@ -10,14 +10,15 @@
 
 .nav > li > a {
   color:#000000;
+  font-family: Roboto;
 }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
   text-decoration: none;
-  background-color: #387ef5;
+  background-color: darkcyan;
   color:white;
-  font-family: Roboto;
+  font-family: Georgia;
 }
 
 .couleur_bar_menu {
@@ -66,4 +67,10 @@
   font-size: 40px;
   color: #000000;
   font-weight:bold;
+}
+.bar_superieur{
+  background-color: darkcyan;
+  height: 100px;
+  width: 100%;
+  margin-bottom: 20px;
 }
