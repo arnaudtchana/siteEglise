@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import Predicators from "./Predications/Predicators";
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
+import Maps from "./maps";
 
 
 class Accueil extends Component {
@@ -110,6 +111,15 @@ class Accueil extends Component {
                     </div>
                     <div className="row paading">
                         <p>ici la liste des evenments a venir</p>
+                    </div>
+                    <div className='row marge_haut_container'>
+                        <div className='col-md-5 marge_div'>
+                            <h1 className='style_titre_predication'>Localisation</h1>
+                            <hr className="soulignement" />
+                        </div>
+                    </div>
+                    <div className="row padding">
+                        <Maps />
                     </div>
             </div>
                 <Footer/>
