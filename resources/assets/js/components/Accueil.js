@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import Predicators from "./Predications/Predicators";
+import Footer from "./Footer";
+import { NavLink } from 'react-router-dom';
 
 
 class Accueil extends Component {
@@ -36,7 +38,7 @@ class Accueil extends Component {
     render() {
         return (
             <div>
-            <div className='row'>
+            <div className='row' style={{minHeight:'100%'}}>
                 <div className='col-md-12 delete_padding'>
                     <Carousel
                         showStatus={false}
@@ -45,6 +47,9 @@ class Accueil extends Component {
                         autoPlay={true}
                     >
                         <div>
+                            <div className="details text-center">
+                                <NavLink to="/a_propos" className="plus_de_detail navlink">Plus de détails</NavLink>
+                            </div>
                             <img src="images/homeSlideImages/02.jpg" />
                             <p className="legend">Legend 1</p>
                         </div>
@@ -64,16 +69,18 @@ class Accueil extends Component {
 
                 </div>
             </div>
-                <div className='row marge_haut_container'>
-                    <div className='col-md-offset-1 col-md-6'>
+                <div className="column" style={{paddingLeft:50,paddingRight:50}}>
+                    <div className='row marge_haut_container'>
+                        <div className='col-md-5 marge_div'>
                         <h1 className='style_titre_predication'>Dernières prédications</h1>
+                        <hr className="soulignement" />
+                        </div>
                     </div>
-                </div>
 
-                <div className='row padding'>
-                {
-                    this.state.dataSource.map(function(predicators){
-                        return (
+                    <div className='row padding'>
+                        {
+                            this.state.dataSource.map(function(predicators){
+                            return (
                             <div className='col-md-4'>
                             <Predicators
                                 titlePublication={predicators.titlePublication}
@@ -82,10 +89,30 @@ class Accueil extends Component {
                                 videoId={predicators.videoId}
                             />
                             </div>
-                        );
-                    })
-                }
-                </div>
+                            );
+                            })
+                        }
+                    </div>
+                    <div className='row marge_haut_container'>
+                        <div className='col-md-5 marge_div'>
+                            <h1 className='style_titre_predication'>Prédications récentes</h1>
+                            <hr className="soulignement" />
+                        </div>
+                    </div>
+                    <div className="row paading">
+                        <p>ici la liste des predications recentes</p>
+                    </div>
+                    <div className='row marge_haut_container'>
+                        <div className='col-md-5 marge_div'>
+                            <h1 className='style_titre_predication'>Evènements à venir</h1>
+                            <hr className="soulignement" />
+                        </div>
+                    </div>
+                    <div className="row paading">
+                        <p>ici la liste des evenments a venir</p>
+                    </div>
+            </div>
+                <Footer/>
             </div>
         )
     }
